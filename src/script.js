@@ -1,6 +1,11 @@
+import { config } from "dotenv";
 import { Client } from "discord.js";
 
-const client = new Client({ intents: ["Guild", "GuildMessages"]});
+config();
 
-const TOKEN = 'MTE1NTU4NDU4MjU3ODYwMjEwNQ.GX4H-1._ZzVPhM5ggzD1tkd-30hRpk1tlityTv8qMyEdE';
+const client = new Client({ intents: ["Guild", "GuildMessages"]});
+const TOKEN = 'MTE1NTU4NDU4MjU3ODYwMjEwNQ.GdS_Lb.OFv6PBIINlqJ1qfGWD5DuDLmaMD04D4xvB8XXQ';
+
+console.log(process.env.TUTORIAL_BOT_TOKEN);
+
 client.login(TOKEN);
