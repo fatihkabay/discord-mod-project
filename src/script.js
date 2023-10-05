@@ -13,4 +13,20 @@ client.on('ready', (e) => {
    console.log(`✅${e.user.tag} is online!`)
 })
 
-client.login("MTE1NTU4NDU4MjU3ODYwMjEwNQ.G39ybC.f3tOAv7aUJydUcpBhxKsHS-aWkRwmVs3N3K2R0")
+client.on('messageCreate', (message) => {
+   if(message.content === 'am i messi?') {
+      message.reply('You are Messi definitely!')
+   }
+})
+
+client.on('messageCreate', (message) => {
+    if(message.author.bot) {
+        return;
+    }
+
+    if(message.content === 'hi') {
+       message.reply('Hello!')
+    }
+ })
+
+client.login("MTE1NTU4NDU4MjU3ODYwMjEwNQ.Gi1gV_.XkqWYAfJcCQr3bEaioRY8h5p4GiEMcF2JAJb_0")
